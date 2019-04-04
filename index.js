@@ -41,7 +41,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
           agent.add('No data found in the database!');
         } else {
         // code is the attributte i wanna read !?
-          agent.add(doc.data().code);
+          agent.add(doc.data().content);
         }
         return Promise.resolve('Read complete');
       }).catch(() => {
